@@ -1,0 +1,3 @@
+/home/jiangl2/THIRD/Thermal_simulation_GPU/Temperature_GPU_FEM/fem_cpp/build/CMakeFiles/edit_cache.dir
+/home/jiangl2/THIRD/Thermal_simulation_GPU/Temperature_GPU_FEM/fem_cpp/build/CMakeFiles/rebuild_cache.dir
+/home/jiangl2/THIRD/Thermal_simulation_GPU/Temperature_GPU_FEM/fem_cpp/build/CMakeFiles/GPU_FEM.dir
