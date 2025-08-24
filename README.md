@@ -43,12 +43,12 @@ cd ..
 **1. Training Data Collection**
 ```
 cd Training_IPOD-GP/fem_cpp/src
-ffc -l dolfin Space.ufl  
+ffc -l dolfin Space.ufl
 cd ..  
-mkdir build  
- cd ./build  
-cmake ..  
- make 
+mkdir build
+cd ./build
+cmake ..
+make 
 ```
 # Construct LEnPOD-GP Model
 ```
