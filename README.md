@@ -40,7 +40,7 @@ cd ..
 ```
 
 # Train IPOD-GP Model
-**Training Data Collection**
+**1. Training Data Collection**
 ```
 cd Training_IPOD-GP/fem_cpp/src
 ffc -l dolfin Space.ufl  
