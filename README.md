@@ -39,7 +39,7 @@ cd ..
 
 ```
 
-# Train IPOD-GP Model
+# Train IPOD-GP Model for Generic Building Blocks
 **1. Training Data Collection**
 ```
 cd Training_IPOD-GP/fem_cpp/src
@@ -64,7 +64,22 @@ Or, just run
 ./run.sh
 ```
 # Construct LEnPOD-GP Model
+Once IPOD-GP models are trained for the generic building blocks of a chip, they can be mapped to other untrained blocks. After mapping, the temperature distribution of the entire chip, induced by the power consumption in all blocks, can be obtained by superposing the temperature results of these IPOD-GP models.
+
+The temperature of each IPOD-GP model can be computed with:
 ```
-The instruction will be completed soon. A little busy.
+./ODE_solver $i
+```
+where i is the index of blocks.
+
+To obtain the temperature of all blocks at once, run:
+```
+./ODE.sh
 ```
 # Post Processing
+The temperature distribution of the entire chip in physical space can be generated with:
+```
+python3 Prediction_MLB_CPU_all.py
+```
+Note that the script [Prediction_MLB_CPU_all.py](https://github.com/WilbertJiang/LEnPOD-GP/blob/main/Prediction_MLB_CPU_all.py) loads temperature solutions from FEM with a very large number of degrees of freedom in order to calculate the least-squares error of the LEnPOD-GP approach. This process is therefore very time-consuming.
+If you do not need the least-squares error, simply comment out the corresponding code.
